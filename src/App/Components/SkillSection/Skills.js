@@ -170,7 +170,7 @@ export default function ResponsiveGrid() {
             </span>
      </h1>
 
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 8, md: 12 }}
+      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}
         data-aos="fade-right"
         data-aos-offset="200"
         data-aos-delay="50"
