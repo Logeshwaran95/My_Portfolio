@@ -1,0 +1,27 @@
+.introStyle{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.introStyle h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* body{
+    background: #d8d8d8;
+} */
+@media screen and (max-width: 768px) {
+    .introStyle{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .intro h1{
+        font-size: 2.5rem;
+        text-align: center;
+
+    }
+}
