@@ -13,9 +13,20 @@ import Swal from 'sweetalert2'
 
 const ContactForm = () => {
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+        setIsMobile(true)
+    } else {
+        setIsMobile(false)
+    }
+  }
+
   React.useEffect(() => {
     AOS.init();
       AOS.refresh();
+      window.addEventListener("resize", handleResize)
   }, []);
 
 
@@ -88,6 +99,12 @@ const ContactForm = () => {
 
   };
 
+  const contactAnime = !isMobile?"slide-right":"none";
+  const nameAnime = !isMobile?"slide-right":"none";
+  const emailAnime = !isMobile?"slide-left":"none";
+  const subjectAnime = !isMobile?"slide-right":"none";
+  const messageAnime = !isMobile?"slide-left":"none";
+
   return (
     <>
     <h1
@@ -110,7 +127,7 @@ const ContactForm = () => {
               
                 <div className='row formRow'>
                   <div className='col-6'
-                  data-aos="slide-right"
+                  data-aos={nameAnime}
                   data-aos-offset="200"
                   data-aos-delay="50"
                   data-aos-duration="1000"
@@ -131,7 +148,7 @@ const ContactForm = () => {
                     {errors.name && <span className='errorMessage'>{errors.name.message}</span>}
                   </div>
                   <div className='col-6'
-                   data-aos="slide-left"
+                   data-aos={emailAnime}
                    data-aos-offset="200"
                    data-aos-delay="50"
                    data-aos-duration="1000"
@@ -155,7 +172,7 @@ const ContactForm = () => {
                 <br></br>
                 <div className='row formRow'>
                   <div className='col'
-                   data-aos="slide-right"
+                   data-aos={subjectAnime}
                    data-aos-offset="200"
                    data-aos-delay="50"
                    data-aos-duration="1000"
@@ -183,7 +200,7 @@ const ContactForm = () => {
                 <div className='row formRow'>
                   <div className='col'
                   
-                  data-aos="slide-left"
+                  data-aos={messageAnime}
                   data-aos-offset="200"
                   data-aos-delay="50"
                   data-aos-duration="1000"

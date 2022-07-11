@@ -1,4 +1,4 @@
-import React,{useEffect, useRef} from "react";
+import React,{useEffect, useRef,useState} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import './App/Components/Header/NavBar.css'
@@ -25,11 +25,22 @@ import 'aos/dist/aos.css';
 //Pages
 const Home = () => {
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+        setIsMobile(true)
+    } else {
+        setIsMobile(false)
+    }
+  }
+
   useEffect(() => {
     AOS.init({
       duration: 2000
     });
     AOS.refresh();
+    window.addEventListener("resize", handleResize)
     
   }, [])
 
@@ -40,6 +51,8 @@ const Home = () => {
   const executeScroll = () => myRef.current.scrollIntoView()  ;
   const executeScroll2 = () => myRef2.current.scrollIntoView()  ;
   const executeScroll3 = () => myRef3.current.scrollIntoView()  ;
+
+  const animations = !isMobile?"flip-up":"slide-up";
 
   return (
       <>
@@ -113,14 +126,9 @@ const Home = () => {
 
       
       <div style={{minHeight:"70vh",marginTop:"5%"}}
-       data-aos="flip-up"
-       data-aos-offset="200"
-       data-aos-delay="50"
-       data-aos-duration="1000"
-       data-aos-easing="ease-in-out"
-       data-aos-mirror="true"
-       data-aos-once="false"
-       data-aos-anchor-placement="top-center"
+      
+        data-aos={animations}
+
       >
       <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal',textAlign:"center",fontSize:"2rem" }}>
               Hi There,

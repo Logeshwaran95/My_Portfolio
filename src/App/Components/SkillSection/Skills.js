@@ -1,5 +1,5 @@
 
-import * as React from 'react';
+import react,{useState,useEffect} from 'react';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -24,7 +24,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const Progress = ({done}) => {
-	const [style, setStyle] = React.useState({});
+	const [style, setStyle] = useState({});
 	
 	setTimeout(() => {
 		const newStyle = {
@@ -46,10 +46,26 @@ const Progress = ({done}) => {
 
 export default function ResponsiveGrid() {
 
-  React.useEffect(() => {
-    AOS.init();
-      AOS.refresh();
-  }, []);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+        setIsMobile(true)
+    } else {
+        setIsMobile(false)
+    }
+  }
+
+  useEffect(() => {
+
+    AOS.init({
+      duration: 2000
+    });
+    AOS.refresh();
+    window.addEventListener("resize", handleResize);
+
+    
+  }, [])
   
     const skills = [{
         name: 'HTML',
@@ -136,6 +152,11 @@ export default function ResponsiveGrid() {
         onLoopDone: () => console.log(`loop completed after 3 runs.`),
       })
 
+      const percentAnimation = !isMobile?"flip-left":"fade-up-left";
+      const stackAnimation = !isMobile?"fade-up":"fade-up-right";
+      const stackSlide = !isMobile?"slide-right":"slide-left";
+      
+
   return (
     <Box sx={{ flexGrow: 1,margin:2 }}>
         
@@ -155,7 +176,7 @@ export default function ResponsiveGrid() {
         {skills.map(data => (
           <Grid item xs={2} sm={4} md={4} key={data.percentage}>
             <Item
-                  data-aos="fade-up-left"
+                  data-aos={percentAnimation}
 
                   data-aos-offset="200"
                   data-aos-delay="50"
@@ -169,7 +190,7 @@ export default function ResponsiveGrid() {
 
       <h1 style={{ paddingTop: '1rem',paddingBottom:'2.5rem', margin: 'auto 0', fontWeight: 'normal',textAlign:"center",marginTop:"50px" }}
       
-      data-aos="slide-right"
+      data-aos={stackSlide}
       data-aos-duration="800"
       >
             <span style={{ color: 'red', fontWeight: 'bold' }}>
@@ -178,7 +199,7 @@ export default function ResponsiveGrid() {
      </h1>
 
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}
-        data-aos="fade-right"
+        data-aos={stackAnimation}
         data-aos-offset="200"
         data-aos-delay="50"
       >
