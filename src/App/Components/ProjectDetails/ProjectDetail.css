@@ -1,0 +1,9 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.containerImg{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: "5%";
+    flex-wrap: wrap;
+}

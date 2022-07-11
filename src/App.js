@@ -14,6 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./App/Components/Footer/Footer";
 import Contact from "./App/Components/Contact/Contact";
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import ProjectDetail from "./App/Components/ProjectDetails/ProjectDetail";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
@@ -211,6 +212,25 @@ const ContactMe = () => {
   );
 };
 
+const ProjectDetailsMobile = () => {
+  return (
+    <div>
+      <NavBar setColor={true}/>
+      <ProjectDetail/>
+    </div>
+  );
+}
+
+const ProjectDetailsWeb = () => {
+  return (
+    <div>
+      <NavBar setColor={true}/>
+      {/* <ProjectDetail/> */}
+    </div>
+  );
+}
+
+
 
 
 function App() {
@@ -232,6 +252,8 @@ function App() {
             <Route path="/skills" element={<SkillsSection/>} />
             <Route path="/contact" element={<ContactMe/>} />
             <Route path="/projects" element={<ProjectSection />}/>
+            <Route path="/project/mobile/details/:id" element={<ProjectDetailsMobile/>}/>
+            <Route path="/project/web/details" element={<ProjectDetailsWeb/>}/>
 
           </Routes>
 

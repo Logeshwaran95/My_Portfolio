@@ -1,65 +1,25 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { useTypewriter,Cursor } from 'react-simple-typewriter'
 import { Tab,Tabs } from 'react-bootstrap'
 import { useSpring, animated } from 'react-spring'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import ScrollAnimation from 'react-animate-on-scroll';
 
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
+import { Modal,Button } from 'react-bootstrap';
+
+import {webProjects,mobileProjects} from "./ProjectDetails/Projects";
+
+import MyVerticallyCenteredModal from './ProjectDetails/ProjectModal'
+
 
 export default function ProjectCard() {
-  const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } })
 
-  const projects = [
-    {
-      name: 'My Portfolio',
-      description: 'This is my portfolio website. It is a ReactJS project.',
-      image: 'https://i.imgur.com/XqQXqQZ.png',
-      link: '',
-      stack: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'React'
-      ]
-    },
-    {
-      name: 'Calculator',
-      description: 'This is a simple calculator. It is a ReactJS project.',
-      image: 'https://i.imgur.com/XqQXqQZ.png',
-      link: '',
-      stack: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-      ]
-    },
-    {
-      name: 'Tic Tac Toe',
-      description: 'This is a Tic Tac Toe game. It is a ReactJS project.',
-      image: 'https://i.imgur.com/XqQXqQZ.png',
-      link: '',
-      stack: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-      ]
-    },
-    {
-      name: 'Movie Website',
-      description: 'This is a movie website. It is a ReactJS project.',
-      image: 'https://i.imgur.com/XqQXqQZ.png',
-      link: '',
-      stack: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-      ]
-    }
-  ]
+  const [modalShow, setModalShow] = React.useState(false);
+
+  const [modalMedia, setModalMedia] = React.useState(false);
+  
 
   const {text} = useTypewriter({
     words: ['Projects','Services'],
@@ -71,6 +31,8 @@ export default function ProjectCard() {
     delaySpeed:1000,
     onLoopDone: () => console.log(`loop completed after 3 runs.`),
   })
+
+
 
   const [key, setKey] = useState('home');
 
@@ -84,10 +46,11 @@ export default function ProjectCard() {
      >
             My {' '}
             <span style={{ color: 'red', fontWeight: 'bold' }}>
-              {/* Style will be inherited from the parent element */}
+              
               {text}
             </span>
           </h1>
+
 
           <Tabs
       id="controlled-tab-example"
@@ -103,7 +66,7 @@ export default function ProjectCard() {
       <div class="box-container">
      
 
-     {projects.map(project => 
+     {webProjects.map(project1 => 
    <div class="box-item"
    data-aos="fade-up"
     data-aos-offset="200"
@@ -113,21 +76,29 @@ export default function ProjectCard() {
      <div class="flip-box">
        <div class="flip-box-front text-center" style={{backgroundImage: `url("https://s25.postimg.cc/frbd9towf/cta-2.png")`}}>
          <div class="inner color-white">
-           <h3 class="flip-box-header">{project.name}</h3>
-           <p>{project.description}</p>
+           <h3 class="flip-box-header">{project1.name}</h3>
+           <p>{project1.description}</p>
            <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img"/>
          </div>
        </div>
        <div class="flip-box-back text-center" style={{backgroundImage: `url("https://s25.postimg.cc/frbd9towf/cta-2.png")`}}>
+        
          <div class="inner color-white">
-           <h3 class="flip-box-header">{project.name}</h3>
-           <p>{project.description}</p>
-           <button class="flip-box-button">View More</button>
+           <h3 class="flip-box-header">{project1.name}</h3>
+           <p>{project1.description}</p>
+
+           <button class="flip-box-button" >
+              
+              <a className='more' href={project1.link} target="_blank" rel="noreferrer">See Live</a>
+    
+           </button>
          </div>
        </div>
      </div>
    </div>
        )}
+
+       
      
  </div>
 
@@ -144,26 +115,71 @@ export default function ProjectCard() {
       >
      
 
-     {projects.map(project => 
+
    <div class="box-item">
      <div class="flip-box">
        <div class="flip-box-front text-center" style={{backgroundImage: `url("https://s25.postimg.cc/frbd9towf/cta-2.png")`}}>
          <div class="inner color-white">
-           <h3 class="flip-box-header">{project.name}</h3>
-           <p>{project.description}</p>
+           <h3 class="flip-box-header">{mobileProjects[0].name}</h3>
+           <p>{mobileProjects[0].short}</p>
            <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img"/>
          </div>
        </div>
        <div class="flip-box-back text-center" style={{backgroundImage: `url("https://s25.postimg.cc/frbd9towf/cta-2.png")`}}>
          <div class="inner color-white">
-           <h3 class="flip-box-header">{project.name}</h3>
-           <p>{project.description}</p>
-           <button class="flip-box-button">View More</button>
+           <h3 class="flip-box-header">{mobileProjects[0].name}</h3>
+           <p>{mobileProjects[0].short}</p>
+
+           <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        data={mobileProjects[0]}
+     
+      />
+           <button class="flip-box-button"  onClick={() => setModalShow(true)}>
+
+              
+              <span className='more'>View More</span>
+       
+
+           </button>
          </div>
        </div>
      </div>
    </div>
-       )}
+
+   <div class="box-item">
+     <div class="flip-box">
+       <div class="flip-box-front text-center" style={{backgroundImage: `url("https://s25.postimg.cc/frbd9towf/cta-2.png")`}}>
+         <div class="inner color-white">
+           <h3 class="flip-box-header">{mobileProjects[1].name}</h3>
+           <p>{mobileProjects[1].short}</p>
+           <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img"/>
+         </div>
+       </div>
+       <div class="flip-box-back text-center" style={{backgroundImage: `url("https://s25.postimg.cc/frbd9towf/cta-2.png")`}}>
+         <div class="inner color-white">
+           <h3 class="flip-box-header">{mobileProjects[1].name}</h3>
+           <p>{mobileProjects[1].short}</p>
+
+           <MyVerticallyCenteredModal
+        show={modalMedia}
+        onHide={() => setModalMedia(false)}
+        data={mobileProjects[1]}
+     
+      />
+           <button class="flip-box-button"  onClick={() => setModalMedia(true)}>
+
+              
+              <span className='more'>View More</span>
+       
+
+           </button>
+         </div>
+       </div>
+     </div>
+   </div>
+       
      
  </div>
 

@@ -493,3 +493,20 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 }
 
+.details:hover{
+  color: #000;
+  transition-duration: 0.4s ;
+  transform:scale3d(1.2,1.2,1.2);
+  letter-spacing: 1px;
+}
+.more{
+  text-decoration: none;
+  color:"white";
+}
+.more:hover{
+  color: #000;
+  transition-duration: 0.4s ;
+  transform:scale3d(1.2,1.2,1.2);
+  letter-spacing: 1px;
+  height:"100%";
+}
