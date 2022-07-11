@@ -29,6 +29,8 @@ const Home = () => {
     AOS.init({
       duration: 2000
     });
+    AOS.refresh();
+    
   }, [])
 
   const myRef = useRef(null);

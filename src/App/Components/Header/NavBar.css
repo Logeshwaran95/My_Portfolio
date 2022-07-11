@@ -152,7 +152,6 @@ background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
       width: 100%;
       display: table;
     }
-  
     .nav-icon {
       display: block;
       position: absolute;
@@ -162,5 +161,6 @@ background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
       font-size: 1.8rem;
       cursor: pointer;
       color: #ffffff;
+      margin-top:-16px;
     }
   }

@@ -7,6 +7,11 @@ import 'aos/dist/aos.css';
 
 export default function About() {
 
+  React.useEffect(() => {
+    AOS.init();
+      AOS.refresh();
+  }, []);
+
   const {text} = useTypewriter({
     words: ['Me','Myself'],
     loop: 0,

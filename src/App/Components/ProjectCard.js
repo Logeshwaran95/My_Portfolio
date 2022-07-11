@@ -5,6 +5,7 @@ import { useSpring, animated } from 'react-spring'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 
 import { Modal,Button } from 'react-bootstrap';
@@ -15,6 +16,11 @@ import MyVerticallyCenteredModal from './ProjectDetails/ProjectModal'
 
 
 export default function ProjectCard() {
+
+  React.useEffect(() => {
+      AOS.init();
+      AOS.refresh();
+  }, []);
 
   const [modalShow, setModalShow] = React.useState(false);
 

@@ -2,6 +2,10 @@ import React,{useEffect,useState} from 'react'
 import './NavBar.css'
 import { NavLink } from 'react-router-dom';
 
+import Swal from 'sweetalert2'
+import { Button } from 'bootstrap';
+
+
 
 
 
@@ -36,6 +40,19 @@ function NavBar({setColor}) {
       backgroundImage: 'linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)'
     }
 
+    const brandTrigger = () => {
+      Swal.fire({
+        // title: 'Sweet!',
+        // text: 'Modal with a custom image.',
+        imageUrl: 'https://i.im.ge/2022/07/11/unKa8K.png',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+        background:'white',
+        confirmButtonText: 'Continue Surfing!',
+      })
+    }
+
     
     return (
       <header >
@@ -43,11 +60,11 @@ function NavBar({setColor}) {
         <nav className="navbar" onClick={e => e.stopPropagation()}
         style={setColor?style:{}}
         >
-          <div className="nav-container">
-            <NavLink exact to="/" className="nav-logo" >
+          <div className="nav-container" >
+            <div className="nav-logo" >
               Logeshwaran
               <i className="fa fa-code"></i>
-            </NavLink>
+            </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
                 <NavLink
