@@ -6,9 +6,19 @@ import "./Contact.css"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2'
+
+
+
+
+
+
+
 
 
 const ContactForm = () => {
+
 
   const {text} = useTypewriter({
     words: ['Contact Me','Lets Catch Up'],
@@ -29,12 +39,38 @@ const ContactForm = () => {
   } = useForm();
   
   const onSubmit = async (data) => {
+
     const { name, email, subject, message } = data;
     
     console.log('Name: ', name);
     console.log('Email: ', email);
     console.log('Subject: ', subject);
     console.log('Message: ', message);
+
+    try {
+      const templateParams = {
+        name,
+        email,
+        subject,
+        message
+      };
+      await emailjs.send(
+        "service_rmqae63",
+        "template_issnlxv",
+        templateParams,
+        "XymN87JECTZ1vN0vg"
+      ).then(() => {
+        Swal.fire(
+          'Thank You !',
+          'I got your Message ! I Will get back to you shortly .',
+          'success'
+        )
+      })
+      reset();
+    } catch (e) {
+      console.log(e);
+    }
+
   };
 
   return (
