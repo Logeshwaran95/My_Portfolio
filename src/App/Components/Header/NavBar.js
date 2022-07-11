@@ -61,7 +61,7 @@ function NavBar({setColor}) {
         style={setColor?style:{}}
         >
           <div className="nav-container" >
-            <div className="nav-logo" >
+            <div className="nav-logo" onClick={brandTrigger}>
               Logeshwaran
               <i className="fa fa-code"></i>
             </div>
