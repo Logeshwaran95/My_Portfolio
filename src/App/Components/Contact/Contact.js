@@ -41,17 +41,7 @@ const ContactForm = () => {
     onLoopDone: () => console.log(`loop completed after 3 runs.`),
   })
   
-  const Toast = Swal.mixin({
-    toast: true,
-    position: 'bottom-end',
-    showConfirmButton: false,
-    timer: 4000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener('mouseenter', Swal.stopTimer)
-      toast.addEventListener('mouseleave', Swal.resumeTimer)
-    }
-  })
+
 
   const {
     register,
@@ -87,10 +77,7 @@ const ContactForm = () => {
           'I got your Message ! I Will get back to you shortly .',
           'success'
         )
-        // Toast.fire({
-        //   icon: 'success',
-        //   title: 'Message sent successfully'
-        // })
+
       })
       reset();
     } catch (e) {

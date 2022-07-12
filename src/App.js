@@ -19,6 +19,10 @@ import ProjectDetail from "./App/Components/ProjectDetails/ProjectDetail";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
+import Swal from 'sweetalert2'
+
+import myresume from "./assets/logeshwaran_resume.pdf";
+
 
 
 
@@ -52,7 +56,25 @@ const Home = () => {
   const executeScroll2 = () => myRef2.current.scrollIntoView()  ;
   const executeScroll3 = () => myRef3.current.scrollIntoView()  ;
 
-  const animations = !isMobile?"flip-up":"slide-up";
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 5000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+
+  const resumeDownloaded = () => {
+        Toast.fire({
+          icon: 'success',
+          title: 'Resume Downloaded successfully'
+        })
+  }
+
 
   return (
       <>
@@ -127,7 +149,7 @@ const Home = () => {
       
       <div style={{minHeight:"70vh",marginTop:"5%"}}
       
-        data-aos={animations}
+        data-aos="zoom-in-up"
 
       >
       <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal',textAlign:"center",fontSize:"2rem" }}>
@@ -139,7 +161,14 @@ const Home = () => {
        <div class="buttons">
         <button  
         // data-aos='slide-right'
-        class="btn-hover color-cv">Download CV</button>
+        class="btn-hover color-cv"
+        onClick={resumeDownloaded}
+        >
+        <a href={myresume} download="Logeshwaran_Resume.pdf" style={{
+          textDecoration: 'none',
+          color: 'white',
+        }}> Download CV </a>
+        </button>
         <button
         // data-aos='slide-left'
         class="btn-hover color-hire">Hire Me</button>

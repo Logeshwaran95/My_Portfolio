@@ -137,6 +137,14 @@ export default function ResponsiveGrid() {
       {
         name: 'fa-brands fa-node-js',
         color: 'green'
+      },
+      {
+        name: 'fa-brands fa-express',
+        color: '#f0db4f'
+      },
+      {
+        name: 'fa-brands fa-mongodb',
+        color: '#61dbfb'
       }
     ];
     
@@ -152,8 +160,7 @@ export default function ResponsiveGrid() {
         onLoopDone: () => console.log(`loop completed after 3 runs.`),
       })
 
-      const percentAnimation = !isMobile?"flip-left":"fade-up-left";
-      const stackAnimation = !isMobile?"fade-up":"fade-up-right";
+
       const stackSlide = !isMobile?"slide-right":"slide-left";
       
 
@@ -176,7 +183,7 @@ export default function ResponsiveGrid() {
         {skills.map(data => (
           <Grid item xs={2} sm={4} md={4} key={data.percentage}>
             <Item
-                  data-aos={percentAnimation}
+                  data-aos='flip-left'
 
                   data-aos-offset="200"
                   data-aos-delay="50"
@@ -199,7 +206,7 @@ export default function ResponsiveGrid() {
      </h1>
 
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}
-        data-aos={stackAnimation}
+        data-aos="zoom-in"
         data-aos-offset="200"
         data-aos-delay="50"
       >

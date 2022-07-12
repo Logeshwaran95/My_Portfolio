@@ -113,13 +113,14 @@
   background-color: rgba(0, 0, 0, 0.829);
 }
 .social-menu ul li:nth-child(2) a:hover{
-  background-color: #E4405F;
+  background-color: #0077b5;
+ 
 }
 .social-menu ul li:nth-child(3) a:hover{
-  background-color: #0077b5;
+  background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);;
 }
 .social-menu ul li:nth-child(4) a:hover{
-  background-color: #000;
+  background-color: #00acee;
 }
 
 .text-center {
