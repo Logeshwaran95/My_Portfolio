@@ -197,7 +197,7 @@ export default function ResponsiveGrid() {
 
       <h1 style={{ paddingTop: '1rem',paddingBottom:'2.5rem', margin: 'auto 0', fontWeight: 'normal',textAlign:"center",marginTop:"50px" }}
       
-      data-aos={stackSlide}
+      data-aos="slide-right"
       data-aos-duration="800"
       >
             <span style={{ color: 'red', fontWeight: 'bold' }}>
