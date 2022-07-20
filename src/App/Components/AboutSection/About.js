@@ -3,6 +3,7 @@ import './About.css'
 import { useTypewriter,Cursor } from 'react-simple-typewriter'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import Swal from 'sweetalert2';
 
 
 export default function About() {
@@ -11,6 +12,18 @@ export default function About() {
     AOS.init();
       AOS.refresh();
   }, []);
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 5000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
 
   const {text} = useTypewriter({
     words: ['Me','Myself'],
@@ -22,6 +35,13 @@ export default function About() {
     delaySpeed:1000,
     onLoopDone: () => console.log(`loop completed after 3 runs.`),
   })
+
+  const handleSayHi = () => {
+    Toast.fire({
+      icon: 'success',
+      title: 'Hey ! To leave a message, go to the Contact page.'
+    })
+  }
 
 
   return (
@@ -46,21 +66,36 @@ export default function About() {
                 data-aos="zoom-in-down"
                 data-aos-offset="200"
             >
-                <h1>Hey. What's Up? Hello !</h1>
-                <h2>I'm Logeshwaran</h2>
+                <h1>Hey. What's Up? </h1>
+                <h2>There's a lot more about me down there  👇️</h2>
+                <br></br>
                 <p>
                 {/* Third-year Engineering student, Future Software Engineer. My passion for Coding brought me to the College of Engineering, Guindy, Anna University. */}
-                I have vivid memories of watching several Hollywood films as a young child that dealt with technology and hacking, including V for Vendetta, Who Am I, The Social Network, etc. I can still picture a man sitting at a desk wearing a black mask, inputting programmes into a green and black themed editor, and successfully doing astonishing feats. I learned about what computers are capable of and was amazed to see these new advancements! I had aspired to be a computer-working guy since I was a young child.
+                Before discussing the current version of myself, let me first explain how the previous version of myself came to be. a quick story is below!
+                
+                <br></br>
+                <br></br>
+                When I was younger, I had a lot of computer-related inquiries! I pondered every time I played games or searched the internet. How such a tiny device is able to produce such miracles! I'm constantly baffled as to how I manage to play games, watch videos, search the internet, etc. I always pick up my computer the moment I have some free time on the weekend or after school, even if I have nothing to do!
+                <br></br>
+                <br></br>
+                I have vivid memories of watching several Hollywood films as a young child that dealt with technology and hacking, including V for Vendetta, Who Am I, The Social Network, etc. I can still picture a man sitting at a desk wearing a black mask, inputting programmes into a green and black themed editor, and successfully doing astonishing feats.
 
-I've always wanted to be a person who spends their days in front of a computer, updating themselves, and learning new things.
+                I grew more conscious of technology's possibilities and was amazed by the most recent breakthroughs. 
+                <br></br>
+                <br></br>
+                It's for this reason that I choose to major in computer science and engineering. I wanted to be updated and keep learning more and more about cutting-edge technology. I always aspire to be someone who is constantly learning about the things that intrigue him, just like I did when I was a child.
+
 
                 </p>
                 
                 <div >
+  
                 <button class="btn-hover color-cv"
                 // data-aos="slide-up"
                 // data-aos-offset="200"
+                onClick={handleSayHi}
                 >Say Hi !</button>
+                            
                 </div>
                 
                 

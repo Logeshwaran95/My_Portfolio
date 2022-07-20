@@ -2,3 +2,11 @@
     color: red;
   
 }
+.contactForm{
+    min-height:50vh;
+}
+@media (max-width: 768px) {
+    .contactForm{
+        min-height:61vh;
+    }
+} 

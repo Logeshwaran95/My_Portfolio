@@ -1,23 +1,34 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import './Hero.css'
 
 export default function Hero() {
+
+  const navigate = useNavigate();
+
+  const navigateAbout = () => {
+    // 👇️ navigate to /
+
+    navigate('/about');
+  };
+
   return (
     <div>
         <div className="hero-container">
 
             <div className="hero-text">
                 <h1>Logeshwaran</h1>
-                <h2>Aspiring Full Stack Developer</h2>
+                <h2>Student at College of Engineering Guindy</h2>
+                <br></br>
                 <p>
-                    I am a full stack developer with a passion for building
-                    beautiful and functional websites. I have a passion for
-                    learning new technologies and constantly learning new
-                    things.
+                I'm a second year engineering student at college of engineering guindy , Anna University , Chennai. 
+                I'm really interested in web technologies. I adore creating websites and mobile apps. I love programming. I enjoy problem-solving and problem-analysis! I like challenges that put my skills to the test.
                 </p>
                 
                 <div >
-                <button class="btn-hover color-cv">Say Hi !</button>
+                {/* <button class="btn-hover color-cv" 
+                 onClick={navigateAbout}
+                 >View More</button> */}
                 </div>
                 
                 

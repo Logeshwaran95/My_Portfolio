@@ -6,7 +6,7 @@ export default function Intro() {
     
 
       const {text} = useTypewriter({
-        words: ['Logeshwaran','An aspiring full-stack developer. ', 'A Student At CEG', 'A Self believer'],
+        words: ['Logeshwaran', 'A Student At CEG', 'A Self believer'],
         loop: 0,
         Cursor,
         CursorStyle:'_',

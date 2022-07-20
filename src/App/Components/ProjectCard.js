@@ -1,14 +1,10 @@
-import React,{useEffect, useState} from 'react'
+import React,{ useState} from 'react'
 import { useTypewriter,Cursor } from 'react-simple-typewriter'
 import { Tab,Tabs } from 'react-bootstrap'
-import { useSpring, animated } from 'react-spring'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+
 
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-
-
-import { Modal,Button } from 'react-bootstrap';
 
 import {webProjects,mobileProjects} from "./ProjectDetails/Projects";
 
@@ -91,7 +87,7 @@ export default function ProjectCard() {
         
          <div class="inner color-white">
            <h3 class="flip-box-header">{project1.name}</h3>
-           <p>{project1.description}</p>
+           <p>{project1.short}</p>
 
            <button class="flip-box-button" >
               
@@ -134,7 +130,7 @@ export default function ProjectCard() {
        <div class="flip-box-back text-center" style={{backgroundImage: `url("https://s25.postimg.cc/frbd9towf/cta-2.png")`}}>
          <div class="inner color-white">
            <h3 class="flip-box-header">{mobileProjects[0].name}</h3>
-           <p>{mobileProjects[0].short}</p>
+           <p>{mobileProjects[0].back}</p>
 
            <MyVerticallyCenteredModal
         show={modalShow}
@@ -166,7 +162,7 @@ export default function ProjectCard() {
        <div class="flip-box-back text-center" style={{backgroundImage: `url("https://s25.postimg.cc/frbd9towf/cta-2.png")`}}>
          <div class="inner color-white">
            <h3 class="flip-box-header">{mobileProjects[1].name}</h3>
-           <p>{mobileProjects[1].short}</p>
+           <p>{mobileProjects[1].back}</p>
 
            <MyVerticallyCenteredModal
         show={modalMedia}

@@ -30,6 +30,7 @@ import myresume from "./assets/logeshwaran_resume.pdf";
 const Home = () => {
 
   const [isMobile, setIsMobile] = useState(false);
+  
 
   const handleResize = () => {
     if (window.innerWidth < 720) {
@@ -71,9 +72,16 @@ const Home = () => {
   const resumeDownloaded = () => {
         Toast.fire({
           icon: 'success',
-          title: 'Resume Downloaded successfully'
+          title: 'Resume Download started successfully'
         })
   }
+
+  const HireClick = () => {
+    Toast.fire({
+      icon: 'error',
+      title: 'Option Not Available'
+    })
+}
 
 
   return (
@@ -106,7 +114,7 @@ const Home = () => {
 
   <button class="mybtn start" 
   // onClick={executeScroll}
-  >Scroll Down &#128525; </button>
+  >Scroll Down  👇️ </button>
 </div>
 
   </ParallaxLayer>
@@ -171,7 +179,9 @@ const Home = () => {
         </button>
         <button
         // data-aos='slide-left'
-        class="btn-hover color-hire">Hire Me</button>
+        class="btn-hover color-hire"
+        onClick={HireClick}
+        >Hire Me</button>
         
       </div>
 

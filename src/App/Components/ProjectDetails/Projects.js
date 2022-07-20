@@ -1,8 +1,8 @@
   const webProjects = [
     {
       name: 'Movie Time',
-      description: 'This is a movie website..',
-      short: 'This is a movie website. It is a ReactJS project.',
+      description: `It's Move Time !`,
+      short: 'Movie Time is a movie website that displays movies and their details fetched from backend (static data).',
       link:"https://movie-time-6lrui27ta-logeshwaran95.vercel.app/",
       stack: [
         'HTML',
@@ -11,9 +11,9 @@
       ]
     },
     {
-      name: 'Foody Landing Page',
-      description: 'This is a foody landing page.',
-      short: 'This is a foody landing page. ',
+      name: 'Foody',
+      description: 'You can’t stop eating, so go!',
+      short: 'A Landing page for a food ordering website just like Zomato or swiggy.',
       link:"https://logeshwaran95.github.io/Foody-Landing-Page/",
       stack: [
         'HTML',
@@ -23,8 +23,8 @@
     },
     {
       name: 'Glassmorphism Portfolio',
-      description: 'This is a Glassmorphism portfolio.',
-      short: 'This is a Glassmorphism portfolio.',
+      description: 'Glassmorphism',
+      short: 'A portfolio website built utilising the glassmorphim technique',
       link:"https://logeshwaran95.github.io/glassmorphism_portfolio/",
       stack: [
         'HTML',
@@ -38,8 +38,9 @@
     {
       id:"id1",
       name:"Cine4Life",
-      short:"A movie App",
+      short:"A Movie App",
       link:"https://expo.dev/@logeshsiva/cine4life",
+      back:"A fully functioning mobile app that will show all movies and packed with more functionalities !",
       description:"Cine4Life has a catalog of all movies, TV series neatly sorted into categories by genre, like horror, thriller, comedy, etc. Users can also search movies with keywords and find them by year of release. Celebrities and their details are also available in the app. Users can log in with google or email and can customize their profile, add movies or series to their watchlist, favorites, and watched list. Many details are added! so that you cannot miss any details of any movie or series or Celebrities!",
       images : [
             {
@@ -100,6 +101,7 @@
       id:"id2",
       name:"Mediaverse",
       short:"A Social media App",
+      back:"A social media app with more interesting features that people love to use!",
       link:"https://expo.dev/@logeshsiva/mediaverse",
       description:"A social networking app that functions similarly to the other daily-used social media apps but adds features from other apps, giving users access to the benefits of all those apps in an one app.",
       images : [

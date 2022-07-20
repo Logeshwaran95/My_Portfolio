@@ -105,7 +105,7 @@ const ContactForm = () => {
             </span>
           </h1>
 
-    <div className='ContactForm' style={{margin:50,minHeight:"70vh"}}>
+    <div className='ContactForm' style={{margin:50}}>
       <div className='container'>
         <div className='row'>
           <div className='col-12 text-center'>

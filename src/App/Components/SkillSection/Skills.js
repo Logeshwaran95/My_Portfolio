@@ -38,7 +38,7 @@ const Progress = ({done}) => {
 	return (
 		<div className="progress">
 			<div className="progress-done" style={style}>
-				{done}%
+				{}
 			</div>
 		</div>
 	)
@@ -67,17 +67,23 @@ export default function ResponsiveGrid() {
     
   }, [])
   
-    const skills = [{
+    const skills = [
+      {
+        name: 'C/C++',
+        percentage:'82',
+        dir:"left",
+      },
+      {
         name: 'HTML',
-        percentage: '80',
+        percentage: '90',
         dir: 'left'
     }, {
         name: 'CSS',
-        percentage: '70',
+        percentage: '85',
         dir:"right"
     }, {
         name: 'JavaScript',
-        percentage: '75',
+        percentage: '85',
         dir: 'left'
     }, {
         name: 'React',
@@ -86,7 +92,7 @@ export default function ResponsiveGrid() {
     },
     {
         name: 'NodeJS',
-        percentage: '70',
+        percentage: '80',
         dir: 'left'
     },
     {
@@ -101,7 +107,7 @@ export default function ResponsiveGrid() {
     },
     {
         name: 'MySQL',
-        percentage: '82',
+        percentage: '88',
         dir: 'right'
     },
     {
@@ -111,9 +117,14 @@ export default function ResponsiveGrid() {
     },
     {
       name:"React Native",
-      percentage:"80",
+      percentage:"85",
       dir:"right"
     },
+    {
+      name:"Git/Github",
+      percentage:"80",
+      dir:"left"
+    }
     
     
     ];
@@ -139,12 +150,8 @@ export default function ResponsiveGrid() {
         color: 'green'
       },
       {
-        name: 'fa-brands fa-express',
-        color: '#f0db4f'
-      },
-      {
-        name: 'fa-brands fa-mongodb',
-        color: '#61dbfb'
+        name: 'fa-brands fa-github',
+        color: '#24292e'
       }
     ];
     
