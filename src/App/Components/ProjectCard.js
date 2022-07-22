@@ -24,7 +24,7 @@ export default function ProjectCard() {
   
 
   const {text} = useTypewriter({
-    words: ['Projects','Services'],
+    words: ['Projects','Works'],
     loop: 0,
     Cursor,
     CursorStyle:'_',

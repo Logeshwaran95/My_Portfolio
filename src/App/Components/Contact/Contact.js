@@ -31,7 +31,7 @@ const ContactForm = () => {
 
 
   const {text} = useTypewriter({
-    words: ['Contact Me','Lets Catch Up'],
+    words: ['Contact Me',`Let's Catch Up`],
     loop: 0,
     Cursor,
     CursorStyle:'_',

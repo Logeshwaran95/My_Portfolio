@@ -157,7 +157,7 @@ export default function ResponsiveGrid() {
     
 
     const {text} = useTypewriter({
-        words: ['Skills','Gifts'],
+        words: ['Skills','Skills'],
         loop: 0,
         Cursor,
         CursorStyle:'_',
