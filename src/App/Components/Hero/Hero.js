@@ -22,7 +22,10 @@ export default function Hero() {
                 <br></br>
                 <p>
                 I'm a second year engineering student at college of engineering guindy , Anna University , Chennai. 
-                I'm really interested in web technologies. I adore creating websites and mobile apps. I love programming. I enjoy problem-solving and problem-analysis! I like challenges that put my skills to the test.
+                Web technologies truly pique my curiosity. I love
+building websites and mobile applications. I
+adore programming, problem-solving, and tasks
+that require me to use my skills to the fullest.
                 </p>
                 
                 <div >

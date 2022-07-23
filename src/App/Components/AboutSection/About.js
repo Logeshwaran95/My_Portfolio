@@ -75,7 +75,9 @@ export default function About() {
                 
                 <br></br>
                 <br></br>
-                When I was younger, I had a lot of computer-related inquiries! I pondered every time I played games or searched the internet. How such a tiny device is able to produce such miracles! I'm constantly baffled as to how I manage to play games, watch videos, search the internet, etc. I always pick up my computer the moment I have some free time on the weekend or after school, even if I have nothing to do!
+                When I was younger, I had a lot of computer-related inquiries! I pondered every time I played games or searched the internet. How such a tiny device is able to produce such miracles! I'm constantly baffled as to how I manage to play games, watch videos, search the internet, etc.
+                When something puzzles me or I don't understand it, I always want to learn everything there is to know about it. and for that reason, I started using my computer and phone more frequently.
+                 I always pick up my computer the moment I have some free time on the weekend or after school, even if I have nothing to do!
                 <br></br>
                 <br></br>
                 I have vivid memories of watching several Hollywood films as a young child that dealt with technology and hacking, including V for Vendetta, Who Am I, The Social Network, etc. I can still picture a man sitting at a desk wearing a black mask, inputting programmes into a green and black themed editor, and successfully doing astonishing feats.
