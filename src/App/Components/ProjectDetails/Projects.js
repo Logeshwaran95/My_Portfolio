@@ -3,7 +3,7 @@
       name: 'Movie Time',
       description: `It's Move Time !`,
       short: 'Movie Time is a movie website that displays movies and their details fetched from backend (static data).',
-      link:"https://movie-time-6lrui27ta-logeshwaran95.vercel.app/",
+      link:"https://movie-time-nu.vercel.app/",
       stack: [
         'HTML',
         'CSS',
