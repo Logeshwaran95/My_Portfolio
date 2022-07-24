@@ -7,24 +7,6 @@
 
 ### ✨ [Demo](https://logeshwaran-portfolio-logeshwaran95.vercel.app/)
 
-## Install
-
-```sh
-npm install
-```
-
-## Usage
-
-```sh
-npm run start
-```
-
-## Run tests
-
-```sh
-npm run test
-```
-
 ## Author
 
 👤 **Logeshwaran S**
