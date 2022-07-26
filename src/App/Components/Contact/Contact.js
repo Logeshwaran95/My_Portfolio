@@ -26,8 +26,26 @@ const ContactForm = () => {
   React.useEffect(() => {
     AOS.init();
       AOS.refresh();
-      window.addEventListener("resize", handleResize)
+      window.addEventListener("resize", handleResize);
+      window.scrollTo(0, 0);
+      Toast.fire({
+        icon: 'info',
+        title: 'Iam looking forward to seeing your message.'
+      })
+      
   }, []);
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 2500,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
 
 
   const {text} = useTypewriter({

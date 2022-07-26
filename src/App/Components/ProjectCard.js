@@ -10,18 +10,35 @@ import {webProjects,mobileProjects} from "./ProjectDetails/Projects";
 
 import MyVerticallyCenteredModal from './ProjectDetails/ProjectModal'
 
+import Swal from 'sweetalert2';
+
 
 export default function ProjectCard() {
 
   React.useEffect(() => {
       AOS.init();
       AOS.refresh();
+      Toast.fire({
+        icon: 'info',
+        title: 'Hover or Tap on the cards to see Project details.'
+      })
   }, []);
 
   const [modalShow, setModalShow] = React.useState(false);
 
   const [modalMedia, setModalMedia] = React.useState(false);
   
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
 
   const {text} = useTypewriter({
     words: ['Projects','Works'],
@@ -91,7 +108,7 @@ export default function ProjectCard() {
 
            <button class="flip-box-button" >
               
-              <a className='more' href={project1.link} target="_blank" rel="noreferrer">See Live</a>
+              <a className='more' href={project1.link} target="_blank" rel="noreferrer">View Live</a>
     
            </button>
          </div>

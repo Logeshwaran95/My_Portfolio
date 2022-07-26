@@ -31,7 +31,7 @@ export default function Intro() {
           <h1 style={{ paddingTop: '1rem', margin: 'auto 0', fontWeight: 'normal' }}>
             I'm{' '}
             <span style={{ color: 'red', fontWeight: 'bold' }}>
-              {/* Style will be inherited from the parent element */}
+           
               {text}
             </span>
           </h1>

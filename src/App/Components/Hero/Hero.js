@@ -29,9 +29,9 @@ that require me to use my skills to the fullest.
                 </p>
                 
                 <div >
-                {/* <button class="btn-hover color-cv" 
+                <button class="btn-hover color-cv" 
                  onClick={navigateAbout}
-                 >View More</button> */}
+                 >View More</button>
                 </div>
                 
                 

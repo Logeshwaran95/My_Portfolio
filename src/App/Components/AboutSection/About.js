@@ -4,20 +4,30 @@ import { useTypewriter,Cursor } from 'react-simple-typewriter'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function About() {
 
+  const navigate = useNavigate();
+
   React.useEffect(() => {
     AOS.init();
-      AOS.refresh();
+    AOS.refresh();
+    window.scrollTo(0, 0);
   }, []);
+
+  const navigateContact = () => {
+    // 👇️ navigate to /
+
+    navigate('/contact');
+  };
 
   const Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
     showConfirmButton: false,
-    timer: 5000,
+    timer: 2500,
     timerProgressBar: true,
     didOpen: (toast) => {
       toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -38,7 +48,7 @@ export default function About() {
 
   const handleSayHi = () => {
     Toast.fire({
-      icon: 'success',
+      icon: 'info',
       title: 'Hey ! To leave a message, go to the Contact page.'
     })
   }
@@ -95,7 +105,7 @@ export default function About() {
                 <button class="btn-hover color-cv"
                 // data-aos="slide-up"
                 // data-aos-offset="200"
-                onClick={handleSayHi}
+                onClick={navigateContact}
                 >Say Hi !</button>
                             
                 </div>

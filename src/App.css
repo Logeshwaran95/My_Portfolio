@@ -435,6 +435,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   -webkit-transition: color 150ms ease-in-out;
   transition: color 150ms ease-in-out;
   transition-duration: 0.5s;
+  transition:all 0.5s ease;
 }
 .start:after {
   content: '';
@@ -502,7 +503,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .more{
   text-decoration: none;
-  color:"white";
+  color:white;
 }
 .more:hover{
   color: #000;
