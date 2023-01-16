@@ -1,9 +1,20 @@
   const webProjects = [
     {
-      name: 'Movie Time',
-      description: `It's Move Time !`,
-      short: 'Movie Time is a movie website that displays movies and their details fetched from backend (static data).',
-      link:"https://movie-time-nu.vercel.app/",
+      name: 'Cartify',
+      description: `The ultimate destination for all your shopping needs`,
+      short: 'An E-commerce website built using MERN stack.',
+      link:"https://the-cartify.vercel.app/",
+      stack: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+      ]
+    },
+    {
+      name: 'Portfolio',
+      description: `A portfolio website to showcase my work`,
+      short: 'My portfolio website built using React.js and You are currently viewing it.',
+      link:"https://logeshwaran-portfolio-logeshwaran95.vercel.app/",
       stack: [
         'HTML',
         'CSS',
@@ -13,8 +24,19 @@
     {
       name: 'Foody',
       description: 'You can’t stop eating, so go!',
-      short: 'A Landing page for a food ordering website just like Zomato or swiggy.',
+      short: 'A Landing page for a food ordering website called Foody',
       link:"https://logeshwaran95.github.io/Foody-Landing-Page/",
+      stack: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+      ]
+    },
+    {
+      name: 'Movie Time',
+      description: `It's Move Time !`,
+      short: 'Movie Time is a movie website that displays movies and their details fetched from backend (static data).',
+      link:"https://movie-time-nu.vercel.app/",
       stack: [
         'HTML',
         'CSS',
