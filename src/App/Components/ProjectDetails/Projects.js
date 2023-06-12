@@ -3,7 +3,7 @@
       name: 'Cartify',
       description: `The ultimate destination for all your shopping needs`,
       short: 'An E-commerce website built using MERN stack.',
-      link:"https://the-cartify.vercel.app/",
+      link:"https://cartify-frontend.vercel.app/",
       stack: [
         'HTML',
         'CSS',
