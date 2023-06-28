@@ -110,7 +110,7 @@ const Home = () => {
  
     >
   <h1>Welcome</h1>
-  <p>Wanna Know About Me ! </p>
+  <p>Curious about me?</p>
 
   <button class="mybtn start" 
   // onClick={executeScroll}
@@ -136,7 +136,7 @@ const Home = () => {
       <div className="bg-text1">
 
     <div className="quote">
-      <h1>I'm a Web Developer</h1>
+      <h1>I'm a Developer</h1>
       <h2>Whats Your Superpower ? </h2>
     </div>
   

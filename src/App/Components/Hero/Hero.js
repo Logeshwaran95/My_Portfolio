@@ -21,17 +21,15 @@ export default function Hero() {
                 <h2>Student at College of Engineering Guindy</h2>
                 <br></br>
                 <p>
-                I'm a second year engineering student at college of engineering guindy , Anna University , Chennai. 
-                Web technologies truly pique my curiosity. I love
-building websites and mobile applications. I
-adore programming, problem-solving, and tasks
-that require me to use my skills to the fullest.
+                Wow! You've made it to the bottom of my portfolio page! But hold on tight, because there's so much more to discover about me. Consider this just the tip of the iceberg! 😉✨
+
+Tap the button below and brace yourself for an immersive journey into my world of tech wonders. Prepare to be amazed! 🔥🚀
                 </p>
                 
                 <div >
                 <button class="btn-hover color-cv" 
                  onClick={navigateAbout}
-                 >View More</button>
+                 >Explore More</button>
                 </div>
                 
                 

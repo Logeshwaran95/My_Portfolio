@@ -70,7 +70,7 @@ export default function ResponsiveGrid() {
     const skills = [
       {
         name: 'C/C++',
-        percentage:'82',
+        percentage:'90',
         dir:"left",
       },
       {
@@ -86,7 +86,7 @@ export default function ResponsiveGrid() {
         percentage: '85',
         dir: 'left'
     }, {
-        name: 'React',
+        name: 'React JS',
         percentage: '85',
         dir: 'right'
     },
@@ -123,6 +123,16 @@ export default function ResponsiveGrid() {
     {
       name:"Git/Github",
       percentage:"80",
+      dir:"left"
+    },
+    {
+      name:"Java",
+      percentage:"70",
+      dir:"right"
+    },
+    {
+      name:"Python",
+      percentage:"70",
       dir:"left"
     }
     
@@ -202,7 +212,7 @@ export default function ResponsiveGrid() {
         ))}
       </Grid>
 
-      <h1 style={{ paddingTop: '1rem',paddingBottom:'2.5rem', margin: 'auto 0', fontWeight: 'normal',textAlign:"center",marginTop:"50px" }}
+      {/* <h1 style={{ paddingTop: '1rem',paddingBottom:'2.5rem', margin: 'auto 0', fontWeight: 'normal',textAlign:"center",marginTop:"50px" }}
       
       data-aos="slide-right"
       data-aos-duration="800"
@@ -210,9 +220,9 @@ export default function ResponsiveGrid() {
             <span style={{ color: 'red', fontWeight: 'bold' }}>
               Stacks
             </span>
-     </h1>
+     </h1> */}
 
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}
+      {/* <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}
         data-aos="zoom-in"
         data-aos-offset="200"
         data-aos-delay="50"
@@ -236,7 +246,7 @@ export default function ResponsiveGrid() {
             </Item>
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
 
 
     </Box>
