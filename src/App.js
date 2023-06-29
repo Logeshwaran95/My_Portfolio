@@ -19,6 +19,8 @@ import ProjectDetail from "./App/Components/ProjectDetails/ProjectDetail";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
+import { useNavigate } from "react-router-dom";
+
 import Swal from 'sweetalert2'
 
 import myresume from "./assets/logeshwaran_resume.pdf";
@@ -28,6 +30,8 @@ import myresume from "./assets/logeshwaran_resume.pdf";
 
 //Pages
 const Home = () => {
+
+  const navigate = useNavigate();
 
   const [isMobile, setIsMobile] = useState(false);
   
@@ -77,10 +81,7 @@ const Home = () => {
   }
 
   const HireClick = () => {
-    Toast.fire({
-      icon: 'error',
-      title: 'Option Not Available'
-    })
+    navigate('/contact');
 }
 
 
