@@ -20,7 +20,7 @@ export default function About() {
   const navigateContact = () => {
     // 👇️ navigate to /
 
-    navigate('/contact');
+    navigate('/skills');
   };
 
   const Toast = Swal.mixin({
@@ -140,10 +140,10 @@ Keep calm and code on!
             <div >
   
   <button class="btn-hover color-cv"
-  // data-aos="slide-up"
-  // data-aos-offset="200"
+  data-aos="slide-up"
+  data-aos-offset="200"
   onClick={navigateContact}
-  >Say Hi !</button>
+  >Explore Skills!</button>
               
   </div>
 

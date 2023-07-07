@@ -12,6 +12,7 @@ import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 
 import "./Skills.css"
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -25,6 +26,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const Progress = ({done}) => {
 	const [style, setStyle] = useState({});
+
 	
 	setTimeout(() => {
 		const newStyle = {
@@ -48,6 +50,7 @@ export default function ResponsiveGrid() {
 
   const [isMobile, setIsMobile] = useState(false);
 
+
   const handleResize = () => {
     if (window.innerWidth < 720) {
         setIsMobile(true)
@@ -63,9 +66,15 @@ export default function ResponsiveGrid() {
     });
     AOS.refresh();
     window.addEventListener("resize", handleResize);
-
+    window.scrollTo(0,0);
     
   }, [])
+
+  const navigate = useNavigate();
+
+  const navigateProject = () => {
+    navigate("/projects");
+  }
   
     const skills = [
       {
@@ -247,6 +256,16 @@ export default function ResponsiveGrid() {
           </Grid>
         ))}
       </Grid> */}
+      <center style={{
+        marginTop:"2rem"
+      }}>
+      <button class="btn-hover color-cv"
+  data-aos="slide-up"
+  data-aos-offset="200"
+
+  onClick={navigateProject}
+  >Explore Projects!</button>
+      </center>
 
 
     </Box>

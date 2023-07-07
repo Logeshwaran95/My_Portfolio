@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react'
 import "./ProjectDetail.css";
-import {useParams} from 'react-router-dom'
+import {useNavigate, useParams} from 'react-router-dom'
 
 import ImageGallery from 'react-image-gallery';
 import { useTypewriter,Cursor } from 'react-simple-typewriter';
 
 
 export default function ProhectDetail() {
+
+
 
     const {id} = useParams();
 
@@ -76,10 +78,12 @@ export default function ProhectDetail() {
   ]
 
     useEffect(() => {
+      window.scrollTo(0,0);
       setImg(images.filter(img => img.id === newid));
       // setImg(img[0].image);
       console.log("here we go ",img);
-   
+     
+
     },[])
 
 
@@ -134,7 +138,9 @@ export default function ProhectDetail() {
    
     />  
     </div>
+    
     </div>
+    
     </>
   )
 }

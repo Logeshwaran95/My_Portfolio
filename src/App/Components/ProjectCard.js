@@ -11,11 +11,15 @@ import {webProjects,mobileProjects} from "./ProjectDetails/Projects";
 import MyVerticallyCenteredModal from './ProjectDetails/ProjectModal'
 
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function ProjectCard() {
 
+  const navigate = useNavigate();
+
   React.useEffect(() => {
+    window.scrollTo(0,0);
       AOS.init();
       AOS.refresh();
       Toast.fire({
@@ -23,6 +27,10 @@ export default function ProjectCard() {
         title: 'Hover or Tap on the cards to see Project details.'
       })
   }, []);
+
+  const navigateContact = () => {
+    navigate("/contact");
+  }
 
   const [modalShow, setModalShow] = React.useState(false);
 
@@ -208,6 +216,17 @@ export default function ProjectCard() {
         <p>hey</p>
       </Tab> */}
     </Tabs>
+
+    <center style={{
+        marginTop:"0.2rem"
+      }}>
+      <button class="btn-hover color-cv"
+  data-aos="flip-up"
+  data-aos-offset="200"
+
+  onClick={navigateContact}
+  >Say Hi!</button>
+      </center>
    
 </>
   )
