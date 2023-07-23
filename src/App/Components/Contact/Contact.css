@@ -5,8 +5,18 @@
 .contactForm{
     min-height:50vh;
 }
+input{
+    height: 3rem;
+}
 @media (max-width: 768px) {
     .contactForm{
         min-height:61vh;
+        margin: none;
+    }
+    form{
+        width: 100%;
+    }
+    input{
+        height: 3rem;
     }
 } 

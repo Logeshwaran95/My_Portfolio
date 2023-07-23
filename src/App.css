@@ -74,12 +74,19 @@
   margin: 0;
   transform: translate(-50%, -50%);
   display: flex;
+  
 }
 
 
 .social-menu ul li{
   list-style: none;
   margin: 0 15px;
+}
+
+@media screen and (max-width: 768px){
+  .social-menu ul li{
+    margin: 0 10px;
+  }
 }
 
 .social-menu ul li .fab{
@@ -106,7 +113,7 @@
 }
 
 .social-menu ul li a:hover{
-  transform: translate(0, -10%);
+  transform: scale(1.2);
 }
 
 .social-menu ul li:nth-child(1) a:hover{
@@ -488,10 +495,27 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     font-size: 1.5rem;
   }
   .bg-text{
-    width: 80%;
+    width: 90%;
+  }
+  .bg-text h1{
+    font-size: 3.2rem;
+    font-weight: bold;
+  }
+  .bg-text p {
+    font-size: 1.8rem;
+  }
+  .bg-text1 h1{
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+  .bg-text1 h2 {
+    font-size: 1.3rem;
   }
   .bg-text1{
-    width: 80%;
+    width: 90%;
+  }
+  .mybtn{
+    font-size: 0.8rem;
   }
 }
 

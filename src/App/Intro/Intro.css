@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
 }
-.introStyle h1{
+.introStyle h1 {
     font-size: 3rem;
     font-weight: bold;
 }
@@ -20,8 +20,11 @@
         justify-content: center;
     }
     .intro h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-align: center;
-
+    }
+    .introStyle h1 span{
+        font-size: 2rem;
+        font-weight: bold;
     }
 }

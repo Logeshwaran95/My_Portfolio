@@ -221,7 +221,7 @@ export default function ProjectCard() {
         marginTop:"0.2rem"
       }}>
       <button class="btn-hover color-cv"
-  data-aos="flip-up"
+  data-aos=""
   data-aos-offset="200"
 
   onClick={navigateContact}

@@ -123,7 +123,7 @@ const ContactForm = () => {
             </span>
           </h1>
 
-    <div className='ContactForm' style={{margin:50}}>
+    <div className='ContactForm' style={{marginTop:"2rem"}}>
       <div className='container'>
         <div className='row'>
           <div className='col-12 text-center'>

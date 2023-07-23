@@ -260,7 +260,7 @@ export default function ResponsiveGrid() {
         marginTop:"2rem"
       }}>
       <button class="btn-hover color-cv"
-  data-aos="slide-up"
+  data-aos=""
   data-aos-offset="200"
 
   onClick={navigateProject}

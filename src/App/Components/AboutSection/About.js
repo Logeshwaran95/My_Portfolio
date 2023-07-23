@@ -140,7 +140,7 @@ Keep calm and code on!
             <div >
   
   <button class="btn-hover color-cv"
-  data-aos="slide-up"
+  data-aos=""
   data-aos-offset="200"
   onClick={navigateContact}
   >Explore Skills!</button>

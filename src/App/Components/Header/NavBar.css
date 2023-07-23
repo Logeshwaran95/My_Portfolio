@@ -76,7 +76,7 @@ background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
     font-weight: 900;
   }
   .nav-logo:hover{
-    color: #fcfcfc;
+    color: #ffffff;
   }
   .nav-links:hover{
     color: #fcfcfc;
@@ -122,9 +122,9 @@ background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
     background: #ffffff;
   }
   
-  .nav-item.active {
-    color: #ffdd40;
-    border: 1px solid #ffffff;
+  .nav-item .active {
+    color: #fbff88a6;
+    /* border: 1px solid #ffffff; */
   }
   
   .nav-icon {
@@ -139,17 +139,23 @@ background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
       width: 100%;
       border-top: 1px solid #fff;
       position: absolute;
-      top: 80px;
+      top: 72px;
       left: -110%;
       opacity: 1;
       transition: all 0.5s ease;
       min-height: 100vh;
     }
-  
+    .nav-links{
+      color: black;
+    }
+    .nav-links:hover{
+      color:black;
+      letter-spacing: 3px;
+    }
     .nav-menu.active {
       /* background: #000000; */
-      background-color: #FF3CAC;
-      background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+      background-color: #ffffff;
+      /* background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%); */
 
       left: 0px;
       opacity: 1;
@@ -157,8 +163,12 @@ background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
       z-index: 1;
     }
     .nav-item .active {
-      color: #ffffff;
+      color: #ff0202;
       border: none;
+    }
+    .nav-item:hover:after {
+      width: 100%;
+      background: #000000;
     }
     .nav-links {
       padding: 1.5rem;
@@ -175,5 +185,11 @@ background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
       cursor: pointer;
       color: #ffffff;
       margin-top:-16px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav-logo {
+      font-size: 1.6rem;
     }
   }
