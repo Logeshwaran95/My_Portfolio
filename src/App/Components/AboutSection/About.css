@@ -51,6 +51,10 @@
     }
     .hero-text1 p{
         font-size: 1.2rem;
+       
+    }
+    .hero-text1{
+        max-width: 95%;
     }
     .hero-image img{
         width: 95%;
